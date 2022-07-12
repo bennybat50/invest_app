@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:palm_alliance/general/multi.dart';
+import 'package:palm_alliance/general/view_investments_portfolio.dart';
 import 'package:palm_alliance/individual/agreements.dart';
 
 class Authentication extends StatelessWidget {
@@ -250,7 +250,7 @@ class Authentication extends StatelessWidget {
                                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Multi(),
+                          builder: (context) => ViewInvestmentsPortfolio(),
                         ));
                                 },
                       child: Row(
