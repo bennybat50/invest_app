@@ -1,8 +1,10 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:palm_alliance/general/purchase.dart';
+
 import 'package:palm_alliance/individual/agreements.dart';
+
+import 'purchase.dart';
 
 class ViewInvestmentsPortfolio extends StatelessWidget {
   ViewInvestmentsPortfolio({Key? key}) : super(key: key);
