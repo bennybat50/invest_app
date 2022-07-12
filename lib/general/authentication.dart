@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:palm_alliance/general/view_investments_portfolio.dart';
 import 'package:palm_alliance/individual/agreements.dart';
+
+import 'portfolio/view_investments_portfolio.dart';
 
 class Authentication extends StatelessWidget {
    Authentication({Key? key}) : super(key: key);
