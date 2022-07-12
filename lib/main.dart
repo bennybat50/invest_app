@@ -10,6 +10,8 @@ import 'package:palm_alliance/group/businessname.dart';
 import 'package:palm_alliance/individual/agreements.dart';
 import 'package:palm_alliance/individual/password.dart';
 
+
+
 import 'general/authentication.dart';
 import 'general/login.dart';
 import 'individual/emailaddress.dart';
