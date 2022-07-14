@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:palm_alliance/general/changepassword.dart';
 import 'package:palm_alliance/general/message.dart';
 import 'package:palm_alliance/general/portfolio/all_active_investment.dart';
+import 'package:palm_alliance/general/portfolio/withdrawal_request.dart';
 import 'package:palm_alliance/general/profile.dart';
 import 'package:palm_alliance/group/businessname.dart';
 import 'package:palm_alliance/individual/agreements.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AllActiveInvestment(),
+      home: WithdrawalRequest(),
     );
   }
 }
