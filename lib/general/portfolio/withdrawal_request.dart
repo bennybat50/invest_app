@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:palm_alliance/general/portfolio/all_active_investment.dart';
 import 'package:flutter/material.dart';
+import 'package:palm_alliance/general/portfolio/withdrawal.dart';
 
 class WithdrawalRequest extends StatelessWidget {
    WithdrawalRequest({Key? key}) : super(key: key);
@@ -137,7 +138,7 @@ class WithdrawalRequest extends StatelessWidget {
                                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => WithdrawalRequest(),
+                          builder: (context) => Withdrawal(),
                         ));
                                 },
                         child: Padding(
@@ -196,7 +197,7 @@ class WithdrawalRequest extends StatelessWidget {
                                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => WithdrawalRequest(),
+                          builder: (context) => Withdrawal(),
                         ));
                                 },
                         child: Padding(
@@ -254,7 +255,7 @@ class WithdrawalRequest extends StatelessWidget {
                                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => WithdrawalRequest(),
+                          builder: (context) => Withdrawal(),
                         ));
                                 },
                         child: Padding(
@@ -312,7 +313,7 @@ class WithdrawalRequest extends StatelessWidget {
                                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => WithdrawalRequest(),
+                          builder: (context) => Withdrawal(),
                         ));
                                 },
                         child: Padding(
@@ -370,7 +371,7 @@ class WithdrawalRequest extends StatelessWidget {
                                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => WithdrawalRequest(),
+                          builder: (context) => Withdrawal(),
                         ));
                                 },
                         child: Padding(

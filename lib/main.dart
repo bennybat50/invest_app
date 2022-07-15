@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:palm_alliance/general/changepassword.dart';
 import 'package:palm_alliance/general/message.dart';
 import 'package:palm_alliance/general/portfolio/all_active_investment.dart';
+import 'package:palm_alliance/general/portfolio/purchase.dart';
+import 'package:palm_alliance/general/portfolio/withdrawal.dart';
 import 'package:palm_alliance/general/portfolio/withdrawal_request.dart';
 import 'package:palm_alliance/general/profile.dart';
 import 'package:palm_alliance/group/businessname.dart';

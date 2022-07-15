@@ -3,8 +3,8 @@ import 'package:palm_alliance/general/message.dart';
 import 'package:palm_alliance/general/profile.dart';
 import 'package:palm_alliance/individual/agreements.dart';
 
-class Purchase extends StatelessWidget {
-  Purchase({Key? key}) : super(key: key);
+class Withdrawal extends StatelessWidget {
+  Withdrawal({Key? key}) : super(key: key);
   final GlobalKey<FormState> _key = GlobalKey<FormState>();
   TextEditingController registerAmount = TextEditingController();
   TextEditingController registerCurrency = TextEditingController();
@@ -38,7 +38,7 @@ class Purchase extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("Purchase investment portfolio", style: TextStyle(color: Colors.white, fontSize: 12),),
+                              Text('Withdrawal request', style: TextStyle(color: Colors.white, fontSize: 12),),
                               Icon(Icons.cancel)
                             ],
                           ),
@@ -46,95 +46,51 @@ class Purchase extends StatelessWidget {
                       ),
                     ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 80),
-                    child: Text('High-Yield Blends'),
+                    padding: const EdgeInsets.symmetric(vertical: 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Container(
+                        height: 95,
+                        width: 285,
+                        color: Colors.grey[200],
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 10),
+                                child: Text('Main Wallet Balance', style: TextStyle(color: Color(0xFF303e67), fontSize: 12, fontWeight: FontWeight.bold)),
+                              ),
+                              Text('\$ 683.47')
+                            ],
+                          ),
+                        ),
+                        
+                      ),
+                    ),
                   ),
-                  SizedBox(
-              height: 30,
-              width: 350,
-              child: Divider(
-                color: Colors.grey.shade400,
-              ),
-            ), 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 70),
-              child: Text('\$ 1000000 USD',
-                  style: TextStyle(
-                    color: Color(0xFF1A7BB7),
-                    fontSize: 16,
-                    fontFamily: "Poppins",
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Container(
+                      height: 95,
+                      width: 285,
+                      color: Colors.grey[200],
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              child: Text('Compound Wallet Balance', style: TextStyle(color: Color(0xFF303e67), fontSize: 12, fontWeight: FontWeight.bold)),
+                            ),
+                            Text('\$'),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-            ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 70),
-                child: Text('Minimum Investment', style: TextStyle(fontSize: 12),),
-              ) ,
-              SizedBox(
-              height: 20,
-              width: 350,
-              child: Divider(
-                color: Colors.grey.shade400,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 70),
-              child: Text('1.53 - 1.55%',
-                  style: TextStyle(
-                    color: Color(0xFF1A7BB7),
-                    fontSize: 18,   
-                    fontFamily: "Poppins",
-                  ),
-                ),
-            ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 85),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Text('Commission', style: TextStyle(fontSize: 12),),
-                ),
-              ) ,
-              SizedBox(
-              height: 20,
-              width: 350,
-              child: Divider(
-                color: Colors.grey.shade400,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: Text(
-                  '1.58%: Compounding Percentage',
-                  style: TextStyle(
-                    color: Color(0xFF303e67),
-                    fontSize: 12,
-                    fontFamily: "Poppins",
-                  ),
-                ),
-            ),
-              
-              SizedBox(
-              height: 20,
-              width: 350,
-              child: Divider(
-                color: Colors.grey.shade400,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: Text('6-Months: Portfolio Duration', style: TextStyle(
-                      color: Color(0xFF303e67),
-                      fontSize: 12,
-                      fontFamily: "Poppins",)),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text('Fill form to purchase investment portfolio', style: TextStyle(
-                    fontSize: 12, fontFamily: "Poppins",)),
-            ),
                       
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
@@ -154,12 +110,12 @@ class Purchase extends StatelessWidget {
               ]), 
                    Padding(
                      padding: const EdgeInsets.symmetric(vertical: 10),
-                     child: Text('Currency', style: TextStyle(fontSize: 10)),
+                     child: Text('Wallet', style: TextStyle(fontSize: 10)),
                    ), 
                   TextFormField(
                    controller: registerCurrency,
                   decoration: InputDecoration(
-                    labelText: 'Select Currency',
+                    labelText: 'Select Wallet',
                     border: OutlineInputBorder(),
                   ),
                   
@@ -169,13 +125,28 @@ class Purchase extends StatelessWidget {
                     
                   }),
                   Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Text('Wallet Address', style: TextStyle(fontSize: 10),),
+              ),
+              TextFormField(
+                   controller: registerAmount,
+                  decoration: InputDecoration(
+                    labelText: 'Enter Wallet Address',
+                    border: OutlineInputBorder(),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty)
+                      return 'Field is required.';
+                    
+                  }),
+                  Padding(
                      padding: const EdgeInsets.symmetric(vertical: 10),
-                     child: Text('Payout Duration', style: TextStyle(fontSize: 10)),
+                     child: Text('2fa Code', style: TextStyle(fontSize: 10)),
                    ), 
                   TextFormField(
                    controller: registerDuration,
                   decoration: InputDecoration(
-                    labelText: 'Select Duration',
+                    labelText: 'Enter 2fa code',
                     border: OutlineInputBorder(),
                   ),
                   
@@ -184,6 +155,11 @@ class Purchase extends StatelessWidget {
                       return 'Field is required.';
                     
                   }),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20, ),
+                    child: Text("Don't have a 2fa code? Scan Qrcode now!", style: TextStyle(fontSize: 12, color: Color(0xFF1A7BB7)),),
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     
@@ -198,7 +174,7 @@ class Purchase extends StatelessWidget {
                                 child: Container(
                                   height: 27,
                                    width: 70,
-                                  color: Colors.blue[50],
+                                  color: Color(0xFF1A7BB7),
                                   child: TextButton(  
                                     onPressed: () {
                                               Navigator.push(
@@ -208,7 +184,7 @@ class Purchase extends StatelessWidget {
                                   ));
                                             },
                                   
-                                    child: Text("Purchase", style: TextStyle(color: Color(0xFF1A7BB7), fontSize: 10),),
+                                    child: Text("Withdraw", style: TextStyle(color: Colors.white, fontSize: 10),),
                               
                                   ),
                                 ),
