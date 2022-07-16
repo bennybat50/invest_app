@@ -7,8 +7,10 @@ class Withdrawal extends StatelessWidget {
   Withdrawal({Key? key}) : super(key: key);
   final GlobalKey<FormState> _key = GlobalKey<FormState>();
   TextEditingController registerAmount = TextEditingController();
-  TextEditingController registerCurrency = TextEditingController();
-  TextEditingController registerDuration = TextEditingController();
+  TextEditingController registerWallet = TextEditingController();
+  TextEditingController register2faCode = TextEditingController();
+  TextEditingController registerWalletAddress = TextEditingController();
+
 
 
   
@@ -113,7 +115,7 @@ class Withdrawal extends StatelessWidget {
                      child: Text('Wallet', style: TextStyle(fontSize: 10)),
                    ), 
                   TextFormField(
-                   controller: registerCurrency,
+                   controller: registerWallet,
                   decoration: InputDecoration(
                     labelText: 'Select Wallet',
                     border: OutlineInputBorder(),
@@ -129,7 +131,7 @@ class Withdrawal extends StatelessWidget {
                 child: Text('Wallet Address', style: TextStyle(fontSize: 10),),
               ),
               TextFormField(
-                   controller: registerAmount,
+                   controller: registerWalletAddress,
                   decoration: InputDecoration(
                     labelText: 'Enter Wallet Address',
                     border: OutlineInputBorder(),
@@ -144,7 +146,7 @@ class Withdrawal extends StatelessWidget {
                      child: Text('2fa Code', style: TextStyle(fontSize: 10)),
                    ), 
                   TextFormField(
-                   controller: registerDuration,
+                   controller: register2faCode,
                   decoration: InputDecoration(
                     labelText: 'Enter 2fa code',
                     border: OutlineInputBorder(),
