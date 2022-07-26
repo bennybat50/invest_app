@@ -18,33 +18,19 @@ class Purchase extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       backgroundColor: Colors.white,
-      title: Text('Name')),
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Text('Purchase investment portfolio', style: TextStyle(color: Colors.black, fontSize: 12)),
+      ),
+      leading: Icon(Icons.cancel, color: Colors.black,),
+      ),    
         body: Form(
           key: _key,
           child: ListView(
             padding: EdgeInsets.all(16),
             children: [
           Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
-                      
-                      child: Container(
-                        height: 40,
-                        width: 290,
-                        color: Color(0xFF303e67),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("Purchase investment portfolio", style: TextStyle(color: Colors.white, fontSize: 12),),
-                              Icon(Icons.cancel)
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+              children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 80),
                     child: Text('High-Yield Blends'),
